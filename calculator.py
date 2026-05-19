@@ -9,5 +9,9 @@ def multiply(a, b):
 
 def divide(a, b):
     if b == 0:
-        raise ValueError("Cannot divide by zero")
+        raise ZeroDivisionError("Division by zero is forbidden")
     return a / b
+
+def power(a, b):
+    """Возводит a в степень b. При отрицательной степени возвращает float."""
+    return a ** b
