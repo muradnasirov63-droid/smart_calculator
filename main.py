@@ -16,7 +16,7 @@ def main():
             result = multiply(a, b)
         elif op == '/':
             result = divide(a, b)
-        elif op == '^':
+        elif op == '^' or op == 'pow':
             result = power(a, b)
         else:
             print("Unknown operator")
