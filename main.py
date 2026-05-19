@@ -1,11 +1,11 @@
-from calculator import add, subtract, multiply, divide
+from calculator import add, subtract, multiply, divide, power   # добавили power
 
 def main():
     print("Smart Calculator")
-    print("Operations: +, -, *, /")
+    print("Operations: +, -, *, /, ^ (power)")
     try:
         a = float(input("First number: "))
-        op = input("Operator (+, -, *, /): ")
+        op = input("Operator (+, -, *, /, ^): ")
         b = float(input("Second number: "))
 
         if op == '+':
@@ -16,6 +16,8 @@ def main():
             result = multiply(a, b)
         elif op == '/':
             result = divide(a, b)
+        elif op == '^':
+            result = power(a, b)
         else:
             print("Unknown operator")
             return
@@ -23,6 +25,3 @@ def main():
         print(f"Result: {result}")
     except ValueError as e:
         print(f"Error: {e}")
-
-if __name__ == "__main__":
-    main()
